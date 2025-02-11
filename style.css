@@ -6,6 +6,13 @@
 
 /* PAGE HEADER BACK */
 body {
+    background-image: url(/image-animation2/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    mask-size: cover;
+    mask-position: center;
     overflow-x: hidden;
     margin: 0;
     background-color: #000;
@@ -69,6 +76,19 @@ p:hover {
 .links:hover {
     color: orange;
 }
+.mission{
+    /* border:3px solid gold; */
+    color: white;
+    background-image: url(/image-animation2/background-4518359_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-shadow: 3px 0px 3px black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 160px;
+    font-size: 10px;
+    text-align: center;
+}
 
 /* Banner Section */
 .banner {
@@ -83,6 +103,7 @@ p:hover {
     font-size: 80px;
     display: flex;
     position: relative;
+    top:10px;
     left: 60px;
     justify-content: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -128,6 +149,12 @@ p:hover {
     gap: 20px;
     text-align: center;
 }
+.mid-box1{
+    position: relative;
+    left:200px;
+    display: flex;
+    justify-content: end;
+}
 
 .mid-box,
 .mid-box1,
@@ -150,36 +177,39 @@ p:hover {
     /* outline: 1px solid red; */
 }
 
-.mid-box {
-    background-image: url(/image-animation/ball-63527_1280.jpg);
-}
+/* .mid-box {
+    background-image: url(/image-animation2/digitization-5231610_1280.jpg);
+} */
 
 .mid-box1 {
-    background-image: url(/image-animation/binary-2372130_1280.jpg);
+    background-image: url(/image-animation2/binary-2372130_1280.jpg);
 }
 
 .mid-box2 {
-    background-image: url(/image-animation/digitization-5231610_1280.jpg);
+   
+    background-image: url(/image-animation2/ai-generated-8707663_1280.jpg);
+
 }
 
 .mid-box3 {
     position: relative;
     right: 50px;
-    background-image: url(/image-animation/ball-63527_1280.jpg);
+    background-image: url(/image-animation2/ball-63527_1280.jpg);
 }
 
 .mid-boxa {
-    background-image: url(/image-animation/web-4687386_1280.jpg);
+   
+    background-image: url(/image-animation2/web-4687386_1280.jpg);
 }
 
 .mid-boxb {
-    background-image: url(/image-animation/web-4687386_1280.jpg);
+    background-image: url(/image-animation2/web-4687386_1280.jpg);
 }
 
 .mid-boxc {
     position: relative;
-    right: 50px;
-    background-image: url(/image-animation/ai-generated-8707663_1280.jpg);
+    background-image: url(/image-animation2/binary-2372130_1280.jpg);
+    right: 50px ;
 }
 
 /* Background Image with Mask */
@@ -187,7 +217,7 @@ p:hover {
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url(bg.jpg);
+    background-image: url(/image-animation2/bg.jpg);
     background-size: cover;
     background-position: center;
     z-index: -1;
@@ -203,4 +233,8 @@ p:hover {
     color: skyblue;
     font-family: Georgia, 'Times New Roman', Times, serif;
     gap: 5px;
+}
+.footer{
+    width: 100%;
+    position: relative;
 }
