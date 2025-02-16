@@ -8,10 +8,12 @@
     <script type="module">
         import { particlesCursor } from 'https://unpkg.com/threejs-toys@0.0.8/build/threejs-toys.module.cdn.min.js';
 
+
+        
         document.addEventListener("DOMContentLoaded", () => {
             const pc = particlesCursor({
                 el: document.body,  // Attach to the entire document
-                gpgpuSize: 1512,// original setting is 512 Defines the resolution for the particle effect (higher = smoother)
+                gpgpuSize: 512,// original setting is 512 Defines the resolution for the particle effect (higher = smoother)
                 colors: [0x00ff00, 0x0000ff, 0xff0000],// Green, Blue, Red particles
                 color:  0xff0000,
                 coordScale: 1,    // Keeps particles tightly following the cursor
@@ -44,6 +46,7 @@
     </script>
 </head>
 <body>
+
 
     <header>
         <h1 id="name">INTELLINET WEB SERVICES</h1> 

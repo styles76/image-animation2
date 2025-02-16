@@ -24,6 +24,8 @@ header {
     display: flex;
     height:200px;
     background-image: url(/image-animation2/milky-way-1653689_1280.jpg);
+    /* -webkit-mask-image: linear-gradient(black, transparent);
+    mask-image: linear-gradient(black, transparent); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
