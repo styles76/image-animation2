@@ -298,7 +298,7 @@ p:hover {
 .scrolltop {
     display: flex;
     position: relative;
-    top:1000px;
+    top:1860px;
     justify-content: center;
     margin-top: auto;
     padding: 20px;
@@ -307,6 +307,8 @@ p:hover {
 button{
     height:35px;
     color:orange;
+    width: 80px;
+    cursor: pointer;
     box-shadow:  2px 1px 5px gold;
     background-color: #13032c;
     font-family: Georgia, 'Times New Roman', Times, serif;

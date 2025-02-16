@@ -1,3 +1,6 @@
+
+
+
 // get user selected text
 const getUserSelectedText = () => {
     return window.getSelection().toString();

@@ -5,39 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/image-animation2/style.css">
     <title>Document</title>
+    <script type="module">
+        import { particlesCursor } from 'https://unpkg.com/threejs-toys@0.0.8/build/threejs-toys.module.cdn.min.js';
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const pc = particlesCursor({
+                el: document.body,  // Attach to the entire document
+                gpgpuSize: 1512,// original setting is 512 Defines the resolution for the particle effect (higher = smoother)
+                colors: [0x00ff00, 0x0000ff, 0xff0000],// Green, Blue, Red particles
+                color:  0xff0000,
+                coordScale: 1,    // Keeps particles tightly following the cursor
+                noiseIntensity: 0.001, //  noise-based movement
+                noiseTimeCoef: 0.0001,// No time-based random movement
+                pointSize: 5, // Size of individual particles
+                pointDecay: 0.0025,// Determines how fast the particles fade
+                sleepRadiusX: 0,  // Set to 0 to ensure constant movement
+                sleepRadiusY: 0,// Ensure particles stay active
+                sleepTimeCoefX: 0.001,// Ensures particles are always active (no idle state)
+                sleepTimeCoefY: 0.002
+            });
+
+            // Track the mouse movement
+            document.addEventListener("mousemove", (event) => {
+                pc.uniforms.uMouse.value.set(
+                    (event.clientX / window.innerWidth) * 2 - 1, // Normalize X position
+                    -(event.clientY / window.innerHeight) * 2 + 1 // Normalize Y position
+                );
+            });
+
+            // Add a click event to change properties randomly
+            document.body.addEventListener('click', () => {
+                pc.uniforms.uColor.value.set(Math.random() * 0xffffff);
+                pc.uniforms.uCoordScale.value = 0.001 * Math.random() * 100;
+                pc.uniforms.uNoiseIntensity.value = 0.001 * Math.random() * 0.001;
+                pc.uniforms.uPointSize.value = 1 + Math.random() * 10;
+            });
+        });
+    </script>
 </head>
 <body>
 
     <header>
-        <h1 id ="name">INTELLINET WEB SERVICES</h1> 
+        <h1 id="name">INTELLINET WEB SERVICES</h1> 
     </header>
-    <!-- <div class="motto"> <h1>Coding the Future—One Line at a Time.</h1></div> -->
 
     <nav class="nav-bar">
         <a href="#" id="home" class="links">HOME</a>
         <a href="#our-services" class="links">SERVICES</a>
         <a href="#" class="links">ABOUT</a>
-        <a href="#" class="links">PROJECTS </a>
+        <a href="#" class="links">PROJECTS</a>
         <a href="#" class="links">CONTACT</a>
     </nav>
- <div class="listing">
-    <!-- <ol> -->
+
+    <div class="listing">
         <li>Writing clean, efficient code ✨</li>
-        <li> Leveraging cutting-edge technology 🚀</li>
+        <li>Leveraging cutting-edge technology 🚀</li>
         <li>Continuously improving our skills 📚</li>
-        <li> Delivering high-quality products ✅</li>
-   
-    <!-- </ol> -->
-
- </div>   
-
-       
-        <div class="content">
-            <!-- <div class="title" id="our-services">OUR SERVICES</div> -->
-
-            <!-- jQuery Library -->
-            <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
-
+        <li>Delivering high-quality products ✅</li>
+    </div>   
 
     <section class="outerContainer">
         <div class="section-box">
@@ -57,15 +82,13 @@
 
     <section class="middle">
         <div class="SERVICES">
-            <!-- Add services content here -->
         </div>
     </section>
 
-    <!--scroll function-->
-<div class="scrolltop">
-    <script src="script.js"></script>
- 
- <button onclick="toTop()"> Back To Top</button>
-</div>
+    <div class="scrolltop">
+        <script src="script.js"></script>
+        <button onclick="toTop()"> Back To Top</button>
+    </div>
+
 </body>
 </html>
