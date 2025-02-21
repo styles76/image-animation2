@@ -22,4 +22,7 @@ const getUserSelectedText = () => {
     return window.matchMedia('prefers-color-scheme: dark)').matches;
  }
 
+
+
+ player.loadPlaylist(['VIDEO_ID_1', 'VIDEO_ID_2', 'VIDEO_ID_3']);
  

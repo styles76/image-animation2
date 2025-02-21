@@ -18,14 +18,24 @@ body {
     background-color: #13032c;
     color: #fff;
 }
+#hero{
+    /* border:2px solid yellow; */
+    font-size: 2em;
+    
+    
+   
+}
 
 /* HEADER AREA */
 header {
     display: flex;
     height:200px;
-    background-image: url(/image-animation2/milky-way-1653689_1280.jpg);
-    /* -webkit-mask-image: linear-gradient(black, transparent);
-    mask-image: linear-gradient(black, transparent); */
+    background-image: url(/image-animation2/milky-way-1653689_1280.jpg); 
+    /* -webkit-mask-image: linear-gradient(black, transparent); */
+    /* mask-image: linear-gradient(black, transparent);  */
+    text-shadow: 2px 1px 3px white;
+    color: rgba(255, 166, 0, 0.753); 
+    font-family: Georgia, 'Times New Roman', Times, serif;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -33,7 +43,7 @@ header {
     padding: 20px;
     /* text-shadow: 2px 1px 5px gold; */
     
-    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;  */
     color: orange;
 }
 /*name heading attributes*/
@@ -56,6 +66,29 @@ header {
     /* color: orange; */
     text-shadow: 2px 1px 5px gold;
 
+}
+
+#videoContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:3px solid orange;
+    font-size: 60px;
+    box-shadow: 1px 3px 2px white;
+    margin:0px 0px 0px 50px;
+    padding: 2px;
+    width: 600px;
+    height: 420px;
+}
+.options{
+    position: relative;
+    top: 900px;
+    padding: 10px;
+    margin: 0px 0px 0px 50px;
+    width:20%;
+    height:410px;
+    /* border:1px dotted lime; */
+   background-color: #fff;
 }
 
 /*bullet-point attributes*/
@@ -84,6 +117,28 @@ li::before {
     height:355px;
     box-shadow: 2px 1px 5px gold;
     margin:95px 0px 0px 40px;
+}
+#image{
+    position: relative;
+    float: right;
+    bottom:300px; 
+    right:30px;
+    /* background-image: url(/image-animation2/green-1757807_1280.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 20px;
+    border:3px dotted lime;
+    border-radius: 50%;
+    height:450px;
+    width:450px;
+}
+/*image text placement*/
+.placement{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 /* Navigation Bar */
@@ -162,8 +217,9 @@ p:hover {
     font-size: 80px;
     display: flex;
     position: relative;
-    top:10px;
-    left: 60px;
+    top:90px;
+    left: 250px;
+    text-align: center;
     justify-content: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-shadow: 1px 3px 2px white;
@@ -242,16 +298,12 @@ p:hover {
 
 
 
-.mid-box2 {
-   
-    background-image: url(/image-animation2/ai-generated-8707663_1280.jpg);
 
-}
 
 .mid-box3 {
     position: relative;
     right: 50px;
-    background-image: url(/image-animation2/ball-63527_1280.jpg);
+    /* background-image: url(/image-animation2/ball-63527_1280.jpg); */
 }
 
 .mid-boxa {

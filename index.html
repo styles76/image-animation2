@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/image-animation2/style.css">
     <title>Document</title>
+
+   
     <script type="module">
         import { particlesCursor } from 'https://unpkg.com/threejs-toys@0.0.8/build/threejs-toys.module.cdn.min.js';
 
@@ -13,7 +15,7 @@
         document.addEventListener("DOMContentLoaded", () => {
             const pc = particlesCursor({
                 el: document.body,  // Attach to the entire document
-                gpgpuSize: 512,// original setting is 512 Defines the resolution for the particle effect (higher = smoother)
+                gpgpuSize: 412,// original setting is 512 Defines the resolution for the particle effect (higher = smoother)
                 colors: [0x00ff00, 0x0000ff, 0xff0000],// Green, Blue, Red particles
                 color:  0xff0000,
                 coordScale: 1,    // Keeps particles tightly following the cursor
@@ -21,10 +23,10 @@
                 noiseTimeCoef: 0.0001,// No time-based random movement
                 pointSize: 5, // Size of individual particles
                 pointDecay: 0.0025,// Determines how fast the particles fade
-                sleepRadiusX: 0,  // Set to 0 to ensure constant movement
-                sleepRadiusY: 0,// Ensure particles stay active
-                sleepTimeCoefX: 0.001,// Ensures particles are always active (no idle state)
-                sleepTimeCoefY: 0.002
+                sleepRadiusX: 100,  // Set to 0 to ensure constant movement
+                sleepRadiusY: 100,//0 was original setting: Ensure particles stay active
+                sleepTimeCoefX: 100,// original setting is 0.001 on x y is 0.002 Ensures particles are always active (no idle state)
+                sleepTimeCoefY: 100
             });
 
             // Track the mouse movement
@@ -47,9 +49,13 @@
 </head>
 <body>
 
-
+   
     <header>
-        <h1 id="name">INTELLINET WEB SERVICES</h1> 
+        <section id="hero">
+            <h2>Hi, I'm Shane</h2>
+            <p>Aspiring Web Developer | Tech Enthusiast</p>
+        </section>
+       
     </header>
 
     <nav class="nav-bar">
@@ -59,13 +65,84 @@
         <a href="#" class="links">PROJECTS</a>
         <a href="#" class="links">CONTACT</a>
     </nav>
-
-    <div class="listing">
+    <div class="options">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+        
+    <!-- <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul> -->
+    </section>
+    <!-- <div class="listing">
         <li>Writing clean, efficient code ✨</li>
         <li>Leveraging cutting-edge technology 🚀</li>
         <li>Continuously improving our skills 📚</li>
         <li>Delivering high-quality products ✅</li>
-    </div>   
+    </div>    -->
+<section id="image" class="placement"> 
+    <p>image here</p>
+   
+</section>
+
+<!--youtube player-->
+<div id="videoContainer"></div>
+<script>
+  // Load YouTube API script
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  var player;
+
+  function onYouTubeIframeAPIReady() {
+      player = new YT.Player('videoContainer', {
+          height: '315',
+          width: '560',
+          videoId: 'AS0yjHPXYI8', //  video ID
+          playerVars: {
+              autoplay: 1, // Try to autoplay
+              mute: 1, // Start muted to allow autoplay
+              controls: 1,
+              modestbranding: 1,
+              showinfo: 0,
+          },
+          events: {
+              'onReady': function(event) {
+                  setTimeout(function() {
+                      event.target.unMute(); // Attempt to unmute after delay
+                      event.target.setVolume(100);
+                      event.target.playVideo();
+                  }, 100); // orginal was 500: Short delay to bypass autoplay restrictions
+              }
+          }
+      });
+  }
+
+  // Handle autoplay block: If blocked, show a button
+  document.addEventListener("click", function() {
+      if (player) {
+          player.unMute();
+          player.setVolume(100);
+          player.playVideo();
+      }
+  });
+  
+</script>
+
+</div>
+
 
     <section class="outerContainer">
         <div class="section-box">
@@ -92,6 +169,10 @@
         <script src="script.js"></script>
         <button onclick="toTop()"> Back To Top</button>
     </div>
+
+
+
+    
 
 </body>
 </html>
