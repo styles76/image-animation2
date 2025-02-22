@@ -123,6 +123,7 @@ li::before {
     float: right;
     bottom:300px; 
     right:30px;
+    background-image: url(/image-animation2/DALL·E\ 2025-02-21\ 16.10.13\ -\ A\ menacing\ AI\ robot\ with\ glowing\ red\ eyes\,\ sharp\ metallic\ features\,\ and\ an\ aggressive\ stance.\ The\ robot\ appears\ angry\,\ with\ clenched\ fists\ and\ an\ inte.webp);
     /* background-image: url(/image-animation2/green-1757807_1280.jpg); */
     background-repeat: no-repeat;
     background-size: cover;
@@ -134,7 +135,9 @@ li::before {
     width:450px;
 }
 /*image text placement*/
-.placement{
+.placement p{
+    position: relative;
+    top:460px;
     display: flex;
     align-items: center;
     justify-content: center;
